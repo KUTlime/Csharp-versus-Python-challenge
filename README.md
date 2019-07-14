@@ -10,4 +10,4 @@ I have deliberately chosen a word count in file challenge because text operation
 
 So, George... *Bring it on, bitch!*
 
-BTW: You have to download the releases and you have to have .NET 4.7.1 framework installed.
+BTW: You have to download the releases and you have to have .NET 4.7.1 framework installed. Copy a testing text file called `Text.txt` to the folder where you extract the releases and make your results at your machine.

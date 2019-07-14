@@ -1,4 +1,4 @@
-# Csharp-versus-Python-challenge
+# C# vs. Python challenge
 > A challenge between Csharp and Python. Discipline: Word count in a file.
 
 # About

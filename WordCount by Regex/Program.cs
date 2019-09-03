@@ -8,9 +8,9 @@ namespace WordCount_by_Regex
     {
         static void Main(string[] args)
         {
+            Console.WriteLine($"[UTC: {DateTime.UtcNow:O}] Starting to read the file...");
             DateTime start = DateTime.UtcNow;
-            Console.WriteLine($"[UTC: {start:O}] Starting to read the file...");
-            var dictionary = new Dictionary<string, UInt64>(1000);
+            var dictionary = new Dictionary<string, UInt64>(100000);
             string[] words = File.ReadAllText("Text.txt").Split(
                 new char[] { '\n', '\r', ' ', '.', ',', '!', '?', ':', ';', '"', '\'', 't', '(', ')', '[', ']', '{', '}' },
                 StringSplitOptions.RemoveEmptyEntries);
@@ -28,11 +28,12 @@ namespace WordCount_by_Regex
 
             }
 
+            DateTime finish = DateTime.UtcNow;
+
             foreach (var keyValuePair in dictionary)
             {
                 Console.WriteLine($"Word: \"{keyValuePair.Key}\" | count: {keyValuePair.Value}");
             }
-            DateTime finish = DateTime.UtcNow;
             Console.WriteLine($"[UTC: {finish:O}] Finished");
             Console.WriteLine($"Elapsed: {(finish - start)}");
             Console.ReadKey();

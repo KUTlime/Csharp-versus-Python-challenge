@@ -12,7 +12,7 @@ namespace WordCount
         {
             Console.WriteLine($"[UTC: {DateTime.UtcNow:O}] Starting to read the file...");
             DateTime start = DateTime.UtcNow;
-            var dictionary = new Dictionary<string, UInt64>(1000);
+            var dictionary = new Dictionary<string, UInt64>(10000);
             var words = Regex.Matches(File.ReadAllText("Text.txt"), "\\w+").Cast<Match>().Select(m => m.Value);
 
             foreach (var word in words)

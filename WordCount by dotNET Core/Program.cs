@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 
-namespace WordCount_by_Regex
+namespace WordCount_by_dotNET_Core
 {
     class Program
     {
@@ -10,7 +10,7 @@ namespace WordCount_by_Regex
         {
             Console.WriteLine($"[UTC: {DateTime.UtcNow:O}] Starting to read the file...");
             DateTime start = DateTime.UtcNow;
-            var dictionary = new Dictionary<string, UInt64>(10000);
+            var dictionary = new Dictionary<string, UInt64>();
             string[] words = File.ReadAllText("Text.txt").Split(
                 new char[] { '\n', '\r', ' ', '.', ',', '!', '?', ':', ';', '"', '\'', 't', '(', ')', '[', ']', '{', '}' },
                 StringSplitOptions.RemoveEmptyEntries);
